@@ -1,0 +1,34 @@
+baseurl = "https://shaerpour.ir"
+theme = "coder"
+
+[params]
+  author = "Amirhossein Shaerpour"
+  info = "DevOps and Platform Engineer"
+  description = "Amirhossein Shaerpour's about page"
+  keywords = "personal,portfolio"
+  avatarurl = "images/ME.jpeg"
+
+  colorScheme = "dark"
+  hidecolorschemetoggle = false
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/shaerpour"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 2
+  url = "https://linkedin.com/in/shaerpour"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa-brands fa-gitlab fa-2x"
+  weight = 2
+  url = "https://gitlab.com/shaerpour"
+[[params.social]]
+  name = "Telegram"
+  icon = "fa-brands fa-telegram fa-2x"
+  weight = 3
+  url = "https://t.me/ahspw"
