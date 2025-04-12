@@ -1,4 +1,5 @@
 baseurl = "https://shaerpour.ir"
+title = "AHSP"
 theme = "coder"
 
 [params]
@@ -32,3 +33,7 @@ theme = "coder"
   icon = "fa-brands fa-telegram fa-2x"
   weight = 3
   url = "https://t.me/ahspw"
+
+[[menu.main]]
+name = "BLOG"
+url = "https://shaerpour.ir/blog"
