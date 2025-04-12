@@ -31,10 +31,10 @@ name = "HOME"
 url = "/"
 weight = 1
 
-# [[menu.main]]
-# name = "POSTS"
-# url = "/blog"
-# weight = 2
+[[menu.main]]
+name = "POSTS"
+url = "/posts"
+weight = 2
 
 [[menu.main]]
 name = "ABOUT"
