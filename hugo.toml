@@ -1,4 +1,4 @@
-baseURL = "https://shaerpour.ir/blog"
+baseURL = "https://blog.shaerpour.ir"
 languageCode = "en-us"
 title = "AHSP"
 theme="archie"
