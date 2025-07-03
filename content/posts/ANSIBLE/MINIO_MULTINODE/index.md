@@ -94,12 +94,12 @@ ansible-playbook -i inventory.yml main.yml -u debian -K
 ```
 Congrats! As the image below shows, We successfully initialized a minio cluster.
 
-![Run Playbook Status](https://blog.shaerpour.ir/images/ansible/minio_multinode/run-playbook-status.png)
+![Run Playbook Status](https://shaerpour.ir/images/ansible/minio_multinode/run-playbook-status.png)
 
 Open up your browser and paste one of your server's IP on port 9001. Your minio console will show up.
 
-![Minio Login](https://blog.shaerpour.ir/images/ansible/minio_multinode/minio-login.png)
+![Minio Login](https://shaerpour.ir/images/ansible/minio_multinode/minio-login.png)
 
 You can log in with the credentials you have configured and enjoy!
 
-![Minio Panel](https://blog.shaerpour.ir/images/ansible/minio_multinode/minio-panel.png)
+![Minio Panel](https://shaerpour.ir/images/ansible/minio_multinode/minio-panel.png)
