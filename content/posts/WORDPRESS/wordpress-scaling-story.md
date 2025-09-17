@@ -143,37 +143,37 @@ server {
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
 
-	    # Don't cache URIs
-	    if ($request_uri = "/") { set $skip_cache 1; }
-	    if ($request_uri ~* "^/wp-admin/") { set $skip_cache 1; }
+        # Don't cache URIs
+        if ($request_uri = "/") { set $skip_cache 1; }
+        if ($request_uri ~* "^/wp-admin/") { set $skip_cache 1; }
         if ($request_uri = "/wp-login.php") { set $skip_cache 1; }
-	    if ($request_uri = "/wp-json/") { set $skip_cache 1; }
+        if ($request_uri = "/wp-json/") { set $skip_cache 1; }
 
-	    # Don't cache wordpress cookies
-	    if ($http_cookie ~* "comment_author") { set $skip_cache 1; }
-	    if ($http_cookie ~* "wordpress_[a-f0-9]+") { set $skip_cache 1; }
-	    if ($http_cookie ~* "wp-postpass") { set $skip_cache 1; }
-	    if ($http_cookie ~* "wordpress_no_cache") { set $skip_cache 1; }
-	    if ($http_cookie ~* "wordpress_logged_in") { set $skip_cache 1; }
-	    if ($http_cookie ~* "postpass") { set $skip_cache 1; }
-	    if ($http_cookie ~* "wordpress_n$") { set $skip_cache 1; }
+        # Don't cache wordpress cookies
+        if ($http_cookie ~* "comment_author") { set $skip_cache 1; }
+        if ($http_cookie ~* "wordpress_[a-f0-9]+") { set $skip_cache 1; }
+        if ($http_cookie ~* "wp-postpass") { set $skip_cache 1; }
+        if ($http_cookie ~* "wordpress_no_cache") { set $skip_cache 1; }
+        if ($http_cookie ~* "wordpress_logged_in") { set $skip_cache 1; }
+        if ($http_cookie ~* "postpass") { set $skip_cache 1; }
+        if ($http_cookie ~* "wordpress_n$") { set $skip_cache 1; }
 
-	    # Cache
-	    fastcgi_cache WORDPRESS;
+        # Cache
+        fastcgi_cache WORDPRESS;
         fastcgi_cache_valid 200 60m;  # Cache 200 OK responses for 60 minutes
         fastcgi_cache_valid 404 1m;   # Cache 404s for 1 minute
         fastcgi_cache_use_stale error timeout updating;
-	    fastcgi_cache_background_update on;
-	    fastcgi_cache_revalidate on;
-	    fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
-	    fastcgi_cache_bypass $skip_cache;
+        fastcgi_cache_background_update on;
+        fastcgi_cache_revalidate on;
+        fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
+        fastcgi_cache_bypass $skip_cache;
         fastcgi_no_cache $skip_cache;
 
-	    add_header X-Cache $upstream_cache_status;
+        add_header X-Cache $upstream_cache_status;
     }
 
     location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|mp4)$ {
-	    expires max;
+        expires max;
         log_not_found off;
     }
 }
