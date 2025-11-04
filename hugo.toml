@@ -40,3 +40,8 @@ weight = 2
 name = "ABOUT"
 url = "/about"
 weight = 3
+
+[[menu.main]]
+name = "SHELF"
+url = "/SHELF"
+weight = 4
