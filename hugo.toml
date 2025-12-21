@@ -1,6 +1,6 @@
 baseURL = "https://shaerpour.ir"
 languageCode = "en-us"
-title = "AHSP"
+title = "Amirhossein Shaerpour"
 theme="archie"
 copyright = "© 2025 Amirhossein Shaerpour"
 pygmentsstyle = "monokai"
@@ -8,8 +8,7 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 [params]
 	mode="dark"
-	useCDN=false
-	subtitle = "Amirhossein Shaerpour"
+	useCDN=true
 
 [[params.social]]
 name = "GitHub"
